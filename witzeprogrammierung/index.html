@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Witzegenerator</title>
+
+ <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h3>Schulhof-Programmierung.de</h3>
+    <img src="witzgenerator_zwei.jpg" alt="was für ein Witz" width="1000" height="500">
+
+    <h1>Der lustige Witzegenerator</h1>
+    <div id="witz">Klicke auf den Button, um einen Witz zu sehen!</div>
+    <button onclick="zeigeWitz()">Neuer Witz!</button>
+
+    <script>
+        const witze = [
+            "Warum dürfen Geister keine Lügen erzählen? Weil man durch sie hindurchsehen kann!",
+            "Was ist orange und läuft durch den Wald? Eine Wanderine!",
+            "Warum können Seeräuber keine Kreise zeichnen? Weil sie Pi raten!",
+            "Wie nennt man einen Bumerang, der nicht zurückkommt? Einen Stock!",
+            "Warum dürfen Hühner keine Autos fahren? Weil sie zu viel Gackern!"
+        ];
+
+        function zeigeWitz() {
+            const zufallsIndex = Math.floor(Math.random() * witze.length);
+            document.getElementById('witz').innerText = witze[zufallsIndex];
+        }
+    </script>
+
+</body>
+</html>
